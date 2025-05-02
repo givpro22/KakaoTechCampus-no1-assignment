@@ -1,0 +1,44 @@
+body {
+    font-family: sans-serif;
+    background: black;
+    color: white;
+    margin: 0;
+  }
+  
+  header {
+    background: #222;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  #searchInput,
+  #searchButton {
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 14px;
+  }
+  
+  #movieContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  .movie-card {
+    background: #333;
+    margin: 5px;
+    padding: 5px;
+    width: 150px;
+    text-align: center;
+  }
+  
+  .movie-card img {
+    width: 100%;
+  }
+  
+  .movie-card h3,
+  .movie-card p {
+    font-size: 14px;
+    margin: 5px 0;
+  }

@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>나의 영화 검색기</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
+  <header>
+    <h1>TMDB 영화 검색</h1>
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="영화 제목을 검색하세요" />
+      <button id="searchButton">검색</button>
+    </div>
+  </header>
+  
+  <main id="movieContainer">
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
