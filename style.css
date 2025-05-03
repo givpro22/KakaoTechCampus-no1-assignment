@@ -19,18 +19,17 @@ body {
   }
   
   #movieContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px;
     padding: 10px;
   }
   
   .movie-card {
     background: #333;
-    margin: 5px;
-    padding: 5px;
-    width: 150px;
+    padding: 10px;
     text-align: center;
+    border-radius: 5px;
   }
   
   .movie-card img {
