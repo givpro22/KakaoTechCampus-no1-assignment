@@ -1,4 +1,4 @@
-const API_KEY = 'api키 자리';
+const API_KEY = '3a87c97dbcf7872ae5f964054a291849';
 const BASE_URL = 'https://api.themoviedb.org/3';
 const IMAGE_BASE = 'https://image.tmdb.org/t/p/w500';
 
@@ -13,6 +13,7 @@ fetchPopularMovies();
 
 function displayMovies(movies) {
   const container = document.getElementById('movieContainer');
+  container.innerHTML = ''; 
 
   movies.forEach(movie => {
     const div = document.createElement('div');
@@ -27,8 +28,12 @@ function displayMovies(movies) {
 }
 
 document.getElementById('searchButton').addEventListener('click', () => {
-  const query = document.getElementById('searchInput').value;
-  searchMovies(query);
+  const query = document.getElementById('searchInput').value.trim();
+  if (query) {
+    searchMovies(query);
+  } else {
+    fetchPopularMovies();
+  }
 });
 
 async function searchMovies(query) {
