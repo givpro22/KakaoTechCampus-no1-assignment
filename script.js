@@ -22,6 +22,7 @@ function displayMovies(movies) {
       <img src="${IMAGE_BASE + movie.poster_path}" alt="${movie.title}" />
       <h3>${movie.title}</h3>
       <p>${movie.vote_average}</p>
+      <p class="overview">${movie.overview.length > 100 ? movie.overview.slice(0, 100) + '...' : movie.overview}</p>
     `;
     container.appendChild(div);
   });
