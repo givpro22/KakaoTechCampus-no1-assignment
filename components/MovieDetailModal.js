@@ -1,6 +1,4 @@
-const API_KEY = '3a87c97dbcf7872ae5f964054a291849';
-const BASE_URL = 'https://api.themoviedb.org/3';
-const IMAGE_BASE = 'https://image.tmdb.org/t/p/w500';
+import { API_KEY, BASE_URL, IMAGE_BASE } from '../api.js';
 
 export async function showMovieModal(movieId) {
   const response = await fetch(`${BASE_URL}/movie/${movieId}?api_key=${API_KEY}&language=ko-KR`);
