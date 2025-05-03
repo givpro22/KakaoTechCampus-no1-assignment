@@ -30,3 +30,11 @@ document.getElementById('searchButton').addEventListener('click', async () => {
   const movies = query ? await searchMovies(query) : await fetchPopularMovies();
   displayMovies(movies);
 });
+
+document.getElementById('searchInput').addEventListener('keydown', async (e) => {
+  if (e.key === 'Enter') {
+    const query = document.getElementById('searchInput').value.trim();
+    const movies = query ? await searchMovies(query) : await fetchPopularMovies();
+    displayMovies(movies);
+  }
+});
